@@ -42,3 +42,28 @@
   font-family: poppins;
   font-size: 0.875rem;
 }
+
+@media screen and (min-width: 1024px) {
+  .banner {
+    padding: 5.25rem 0;
+  }
+
+  .banner__titulo {
+    font-size: 2.25rem;
+  }
+
+  .busca__input {
+    width: 50%;
+    padding: 1rem 0;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .busca__input {
+    width: 30%;
+  }
+
+  .busca__input::placeholder {
+    background-position: 25%;
+  }
+}

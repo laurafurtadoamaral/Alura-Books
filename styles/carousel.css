@@ -21,6 +21,15 @@
   margin: 0.5rem 0 0.75rem 0;
 }
 
+.swiper-wrapper {
+  padding: 0 1.25rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+
 .card__extra {
   background-color: var(--branco);
   margin: 1.25rem 1.5rem;
@@ -30,6 +39,7 @@
 
 .card__infos {
   display: flex;
+  justify-content: space-between;
 }
 
 .card__infos__textos {
@@ -99,4 +109,82 @@
   align-self: center;
   font-size: 1rem;
   padding: 1rem 2.2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .caroussel__titulo {
+    padding: 3.18rem 0 1rem 0;
+    font-size: 1.625rem;
+  }
+
+  .swiper {
+    padding: 2rem;
+    width: 80%;
+  }
+
+  .swiper-wrapper {
+    padding: 3rem 1rem 0 1rem;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: block;
+    top: 60%;
+  }
+
+  .caroussel__imagem {
+    width: 192px;
+  }
+
+  .card__extra {
+    margin: 1.8rem 20% 3rem 20%;
+    width: 60%;
+  }
+
+  .card__infos__textos {
+    justify-content: start;
+    gap: 0.5rem;
+  }
+
+  .card__titulo {
+    padding-top: 1.5rem;
+  }
+
+  .card__paragrafo {
+    font-size: 1rem;
+    padding-right: 5rem;
+  }
+
+  .card__imagem {
+    padding: 1.5rem 1.5rem 1.5rem 0;
+  }
+
+  .card__botoes {
+    padding: 0 1.5rem 1.5rem 0.8rem;
+  }
+
+  .icone__coracao {
+    height: 60%;
+  }
+
+  .icone__sacola {
+    height: 80%;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .caroussel__titulo {
+    font-size: 2rem;
+    padding: 7rem 7 1rem 0;
+  }
+
+  .caroussel__corpo {
+    display: flex;
+    margin: 4.625rem 10% 7.125rem 10%;
+    gap: 2.875rem;
+  }
+
+  .card__extra {
+    margin: 7% 0 2% 0;
+  }
 }

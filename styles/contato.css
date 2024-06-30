@@ -18,8 +18,7 @@
 }
 
 .contato__input {
-  margin-top: 2rem;
-  width: 100%;
+  width: 90%;
   height: 2.75rem;
   margin-top: 1rem;
   border: 1px solid;
@@ -29,6 +28,7 @@
   color: var(--azul);
   font-weight: 400;
   line-height: 150%;
+  padding-left: 10%;
 }
 
 .contato__input::placeholder {
@@ -40,4 +40,43 @@
   font-weight: 400;
   font-family: poppins;
   padding: 13%;
+}
+
+@media screen and (min-width: 1024px) {
+  .contato {
+    padding: 2rem 15% 3.3rem 15%;
+    display: flex;
+    gap: 10%;
+  }
+
+  .contato__titulo {
+    font-size: 1.5rem;
+  }
+
+  .contato__paragrafo {
+    padding-top: 1rem;
+    font-weight: 300;
+  }
+
+  .contato__input {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .contato {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    padding: 4rem 25%;
+  }
+
+  .contato__paragrafo {
+    width: 80%;
+  }
+
+  .contato__input {
+    width: 35%;
+    padding-left: 1%;
+  }
 }

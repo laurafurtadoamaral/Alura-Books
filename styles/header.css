@@ -12,11 +12,16 @@
   background-image: url("../img/Menu.svg");
   background-repeat: no-repeat;
   background-position: center;
+  padding: 1rem;
+}
+
+.container__botao:checked ~ label > .cabecalho__menu_sanduiche {
+  background-image: url("../img/Menu Aberto.svg");
+  background-color: var(--azul);
 }
 
 .cabecalho__container_menu {
   display: flex;
-  padding: 1rem 2rem;
   align-items: center;
   gap: 2rem;
 }
@@ -27,7 +32,7 @@
 
 .cabecalho__container_links {
   display: flex;
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   align-items: center;
   gap: 1rem;
 }
@@ -36,9 +41,8 @@
   position: absolute;
   top: 100%;
   background-color: var(--branco);
-  width: 45vw;
+  width: 50vw;
   left: 0%;
-  padding: 1rem 2rem;
 }
 
 .container__botao:checked ~ .lista-menu {
@@ -53,7 +57,7 @@
 
 .lista-menu__titulo,
 .lista-menu__item {
-  padding: 0.75rem 0;
+  padding: 0.75rem 2rem;
 }
 
 .lista-menu__item {
@@ -62,13 +66,102 @@
 
 .lista-menu__link {
   color: var(--azul);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: var(--azul);
-  background-clip: text;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-a:hover {
-  color: var(--laranja) !important;
+a.lista-menu__link:hover {
+  color: var(--laranja);
+}
+
+.container__titulo,
+.container__menu {
+  display: none;
+}
+
+.links__cabecalho__descricao {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .container__titulo,
+  .container__titulo-negrito {
+    display: inline-block;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.875rem;
+  }
+
+  .container__titulo {
+    font-weight: 400;
+  }
+
+  .container__titulo-negrito {
+    font-weight: 700;
+  }
+
+  .container__menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .container__menu__link {
+    font-size: 1rem;
+    color: var(--preto);
+    text-transform: uppercase;
+    padding: 0 1.5rem;
+  }
+
+  .opcoes-botao:checked ~ .lista-menu {
+    display: block;
+    width: auto;
+    margin-left: 37%;
+  }
+
+  .lista-menu__item {
+    padding: 1rem 1.5rem;
+  }
+
+  .container__menu__link:hover {
+    color: var(--laranja);
+  }
+  .lista-menu__item:hover {
+    background: var(--azul-degrade);
+  }
+
+  .lista-menu__item:hover .lista-menu__link {
+    color: var(--branco);
+  }
+
+  .cabecalho__menu_sanduiche,
+  .cabecalho__links-favoritos,
+  .opcoes-botao {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .container__menu {
+    margin-right: auto;
+  }
+
+  .links__cabecalho {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 0.5rem;
+  }
+
+  .links__cabecalho__descricao {
+    display: inline;
+    color: var(--preto);
+    font-size: 1.25rem;
+  }
+
+  .cabecalho__container_links {
+    gap: 3.8rem;
+  }
+
+  .lista-menu {
+    left: -21%;
+  }
 }
